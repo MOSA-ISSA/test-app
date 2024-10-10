@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { TouchableOpacity } from 'react-native-web'
 import { useNavigation, useRoute } from '@react-navigation/native';
 import Alert from '../components/Alert';
+import { AntDesign } from '@expo/vector-icons';
 
 const Card = ({ product }) => {
     const navigation = useNavigation();
@@ -17,6 +18,7 @@ const Card = ({ product }) => {
         </TouchableOpacity>
     )
 }
+
 const Home = () => {
     const route = useRoute();//
     const navigation = useNavigation();//
@@ -53,6 +55,9 @@ const Home = () => {
 
     return (
         <View accessibilityRole={'none'} style={styles.container}>
+
+            <AntDesign name="shoppingcart" size={100} color="black" />
+
             <ScrollView contentContainerStyle={styles.render}>
                 {renderCard()}
             </ScrollView>
